@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+.App {
+  align-items: center;
+  justify-content: center;
+}
+body {
+  background-color: #898989;
+}
+.heading {
+  text-align: center;
+  text-decoration: underline;
+  color: #b1b1b1;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px #ddd;
+}
+form h3 {
+  text-align: center;
+}
+form input {
+  width: 70%;
+  padding: 10px 5px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.input_container {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-left: 50px;
+  background: #036cff;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.todo_container {
+  width: 50%;
+  margin: 0 auto;
+}
+.addTodoCont {
+  width: 50%;
+  margin: 0 auto;
+}
+.todo {
+  margin-top: 20px;
+  background: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px #ddd;
+}
+.todo p {
+  color: #b1b1b1;
+  width: 50%;
+  border: none;
+
+  background-color: transparent;
+
+  font-family: "Poppins", sans-serif;
+}
+.button-complete,
+.button-delete {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+}
+#i {
+  font-size: 35px;
+}
+.button-complete {
+  color: #00ff22;
+  margin-right: 10px;
+}
+
+.button-delete {
+  color: rgb(255, 38, 0);
+}
+@media screen and (max-width: 667px) {
+  .input_container {
+    width: 60%;
+  }
+  .task_container {
+    width: 90%;
+  }
+  .task {
+    margin-right: 0px;
+  }
+}
+input:focus,
+button:focus {
+  outline: none;
+}
