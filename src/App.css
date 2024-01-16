@@ -112,7 +112,7 @@ form input {
   color: rgb(255, 38, 0);
 }
 
-/* Media query for smaller screens
+/* Media query for smaller screens */
 
 @media screen and (max-width: 667px) {
   .input_container {
