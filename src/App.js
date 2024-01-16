@@ -13,9 +13,10 @@ import {
 import { db } from "./firebase";
 
 function App() {
+  // State for managing the list of todos
   const [todos, setTodos] = useState([]);
 
-  // running useEffect to get previously added todos from firebase storage
+   // useEffect to fetch todos from Firebase on component mount
   useEffect(() => {
     const q = query(collection(db, "todos"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -25,6 +26,7 @@ function App() {
       });
       setTodos(todosArray);
     });
+    // Cleanup function to unsubscribe from snapshot listener
     return () => unsubscribe();
   }, []);
 
@@ -38,6 +40,7 @@ function App() {
     await deleteDoc(doc(db, "todos", id));
   };
 
+  // Render the main structure of the App
   return (
     <div className="App">
       <div className="addTodoCont">
