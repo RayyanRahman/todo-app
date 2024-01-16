@@ -3,16 +3,20 @@ import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 function AddTodo() {
+  // State for managing the input value
   const [task, setTask] = useState("");
 
-  // function for adding the todo task
+  // Function for adding the todo task
   const handleAdd = async (e) => {
     e.preventDefault();
+    // Checking if the task is not an empty string
     if (task !== "") {
+      // Adding a new document to the "todos" collection in Firestore
       await addDoc(collection(db, "todos"), {
-        task,
-        completed: false,
+        task, // Task content
+        completed: false, // Default to not completed
       });
+      // Clearing the input field after adding the task
       setTask("");
     }
   };
