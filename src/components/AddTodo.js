@@ -10,11 +10,13 @@ function AddTodo() {
   const handleAdd = async (e) => {
     e.preventDefault();
     // Checking if the task is not an empty string
+    let currentTime = Date.now();
     if (task !== "") {
       // Adding a new document to the "todos" collection in Firestore
       await addDoc(collection(db, "todos"), {
         task, // Task content
         completed: false, // Default to not completed
+        lastUpdatedTime: currentTime,
       });
       // Clearing the input field after adding the task
       setTask("");
@@ -24,7 +26,7 @@ function AddTodo() {
   return (
     <form onSubmit={handleAdd}>
       <h1 className="heading">Todo App</h1>
-      <div className="input_container">
+      <div className="input-container">
         <input
           type="text"
           placeholder="Enter task todo here..."
