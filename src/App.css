@@ -39,7 +39,7 @@ form input {
   font-weight: 500;
 }
 
-.input_container {
+.input-container {
   margin-bottom: 20px;
 }
 
@@ -58,11 +58,11 @@ form input {
   font-weight: 500;
 }
 
-.todo_container {
+.todo-container {
   width: 50%;
   margin: 0 auto;
 }
-.addTodoCont {
+.add-todo-cont {
   width: 50%;
   margin: 0 auto;
 }
@@ -100,7 +100,7 @@ form input {
   background-color: transparent;
   border-radius: 50%;
 }
-#i {
+.icons {
   font-size: 35px;
 }
 .button-complete {
@@ -113,9 +113,8 @@ form input {
 }
 
 /* Media query for smaller screens */
-
 @media screen and (max-width: 667px) {
-  .input_container {
+  .input-container {
     width: 60%;
   }
   .task_container {
@@ -125,6 +124,7 @@ form input {
     margin-right: 0px;
   }
 }
+
 input:focus,
 button:focus {
   outline: none;
